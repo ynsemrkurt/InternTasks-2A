@@ -32,8 +32,8 @@ class DetailsActivity : AppCompatActivity() {
         status?.let {
             val statusDrawableRes = fetchImage(it)
             setImage(statusDrawableRes)
-        }?: run {
-            Log.e("Null Error","status is null")
+        } ?: run {
+            Log.e("Null Error", "status is null")
         }
     }
 
