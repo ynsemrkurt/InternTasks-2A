@@ -23,10 +23,6 @@
     <dimen name="text_size_xxxlarge">40sp</dimen>
     <dimen name="text_size_xxxxlarge">64sp</dimen>
 
-    <!-- Button Size -->
-    <dimen name="button_height">48dp</dimen>
-    <dimen name="button_text_size">16sp</dimen>
-
     <!-- Radius Size -->
     <dimen name="corner_radius_small">4dp</dimen>
     <dimen name="corner_radius_medium">8dp</dimen>

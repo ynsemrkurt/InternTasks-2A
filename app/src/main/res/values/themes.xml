@@ -9,10 +9,10 @@
         <item name="textAppearanceBody2">@style/XSmallBoldTextStyle</item>
 
         <!-- Button styles -->
-        <item name="background">@drawable/button_style</item>
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
 
         <!-- Color styles -->
-        <item name="color">@color/day_color</item>
+        <item name="strokeColor">@color/day_color</item>
         <item name="android:textColor">@color/day_color</item>
     </style>
 </resources>

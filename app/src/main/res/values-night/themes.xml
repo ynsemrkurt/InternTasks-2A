@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.InternTasks2A" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Typography styles -->
@@ -9,10 +9,10 @@
         <item name="textAppearanceBody2">@style/XSmallBoldTextStyle</item>
 
         <!-- Button styles -->
-        <item name="background">@drawable/button_style</item>
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
 
         <!-- Color styles -->
-        <item name="color">@color/night_color</item>
+        <item name="strokeColor">@color/night_color</item>
         <item name="android:textColor">@color/night_color</item>
     </style>
 </resources>
