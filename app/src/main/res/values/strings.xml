@@ -19,4 +19,8 @@
     <string name="date3">Per, 04 Nisan</string>
     <string name="date4">Cum, 05 Nisan</string>
     <string name="degreeLong">14° - 27°</string>
+    <string name="key_degree">degree</string>
+    <string name="key_city">city</string>
+    <string name="key_status">status</string>
+    <string name="update_data">Verileri Güncelle</string>
 </resources>
