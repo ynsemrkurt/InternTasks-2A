@@ -65,8 +65,6 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
             val context = itemView.context
             val intent = Intent(context, DetailsActivity::class.java)
             intent.putExtra("degree", weather.degree)
-            intent.putExtra("degreeMin", weather.degreeMin)
-            intent.putExtra("degreeMax", weather.degreeMax)
             intent.putExtra("city", weather.city)
             intent.putExtra("status", weather.status)
             context.startActivity(intent)
