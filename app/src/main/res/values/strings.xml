@@ -5,4 +5,6 @@
     <string name="default_degree_bw">14° - 27°</string>
     <string name="default_city">İstanbul</string>
     <string name="default_status">Güneşli</string>
+    <string name="date">01 Nisan 2024</string>
+    <string name="today">Bugün</string>
 </resources>
