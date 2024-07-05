@@ -39,8 +39,8 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
         private val textViewStatus = itemView.findViewById<TextView>(R.id.textViewStatus)
 
         fun bind(weather: Weather) {
-            textViewDegree.text = weather.degree.toString()
-            textViewDegreeBw.text = "${weather.degreeMin} - ${weather.degreeMax}°"
+            textViewDegree.text = "${weather.degree}°"
+            textViewDegreeBw.text = "${weather.degreeMin}° - ${weather.degreeMax}°"
             textViewCity.text = weather.city
             textViewStatus.text = weather.status
 
