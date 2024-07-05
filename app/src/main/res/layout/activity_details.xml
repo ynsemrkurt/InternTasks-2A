@@ -271,7 +271,7 @@
         android:layout_marginStart="@dimen/margin_xlarge"
         android:layout_marginEnd="@dimen/margin_xlarge"
         android:layout_marginBottom="@dimen/margin_medium"
-        android:text="Verileri Güncelle"
+        android:text="@string/update_data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
