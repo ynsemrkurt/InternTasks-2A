@@ -13,46 +13,65 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/padding_medium"
-                android:text="@string/default_degree"
-                android:textAppearance="?textAppearanceTitleLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/padding_medium"
-                android:text="@string/default_degree_bw"
-                android:textAppearance="?textAppearanceTitleSmall" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:paddingStart="@dimen/padding_medium"
-                android:text="@string/default_city"
-                android:textAppearance="?textAppearanceTitleSmall" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textViewDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@string/default_degree"
+                android:textAppearance="?textAppearanceTitleLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDegreeBw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/default_degree_bw"
+                android:textAppearance="?textAppearanceTitleSmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDegree" />
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/default_city"
+                android:textAppearance="?textAppearanceTitleSmall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDegreeBw" />
+
             <ImageView
+                android:id="@+id/imageViewStatus"
                 android:layout_width="@dimen/icon_size_xlarge"
                 android:layout_height="@dimen/icon_size_xlarge"
-                android:src="@drawable/ic_launcher_background" />
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:src="@drawable/ic_sunny"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_status"
+                android:textAppearance="?textAppearanceTitleSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewCity"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewStatus"
+                app:layout_constraintStart_toStartOf="@+id/imageViewStatus"
+                app:layout_constraintTop_toTopOf="@+id/textViewCity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 

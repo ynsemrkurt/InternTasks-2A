@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonGoCase1"
-        android:layout_width="@dimen/layout_width_medium"
+        android:layout_width="@dimen/layout_size_medium"
         android:layout_height="wrap_content"
         android:text="@string/activities"
         app:layout_constraintBottom_toBottomOf="parent"

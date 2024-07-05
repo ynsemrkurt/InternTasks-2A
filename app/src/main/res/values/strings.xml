@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">InternTasks-2A</string>
     <string name="activities">Activities</string>
+    <string name="default_degree">26°</string>
+    <string name="default_degree_bw">14° - 27°</string>
+    <string name="default_city">İstanbul</string>
+    <string name="default_status">Güneşli</string>
 </resources>
