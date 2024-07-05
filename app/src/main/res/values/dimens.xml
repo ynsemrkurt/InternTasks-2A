@@ -6,6 +6,9 @@
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
     <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">64dp</dimen>
+    <dimen name="margin_xxxlarge">128dp</dimen>
+    <dimen name="margin_xxxxlarge">180dp</dimen>
 
     <!-- Padding Size -->
     <dimen name="padding_small">8dp</dimen>
@@ -39,10 +42,18 @@
     <dimen name="icon_size_medium">32dp</dimen>
     <dimen name="icon_size_large">48dp</dimen>
     <dimen name="icon_size_xlarge">64dp</dimen>
+    <dimen name="icon_size_xxlarge">96dp</dimen>
 
     <!-- Layout Size -->
-    <dimen name="layout_width_small">120dp</dimen>
-    <dimen name="layout_width_medium">240dp</dimen>
-    <dimen name="layout_width_large">360dp</dimen>
+    <dimen name="layout_size_xsmall">120dp</dimen>
+    <dimen name="layout_size_small">160dp</dimen>
+    <dimen name="layout_size_medium">240dp</dimen>
+    <dimen name="layout_size_large">360dp</dimen>
+
+    <!-- Elevation Size -->
+    <dimen name="elevation_small">4dp</dimen>
+    <dimen name="elevation_medium">8dp</dimen>
+    <dimen name="elevation_large">12dp</dimen>
+    <dimen name="elevation_xlarge">16dp</dimen>
 
 </resources>
