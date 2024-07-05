@@ -1,15 +1,12 @@
 package com.example.interntasks_2a.Case1
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
+import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interntasks_2a.R
+import com.example.interntasks_2a.databinding.ItemWeatherBinding
 
 class WeatherAdapter(private val weatherList: List<Weather>) :
     RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
@@ -18,8 +15,8 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
         parent: ViewGroup,
         viewType: Int
     ): WeatherAdapter.WeatherViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_weather, parent, false)
-        return WeatherViewHolder(view)
+        val binding = ItemWeatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return WeatherViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: WeatherAdapter.WeatherViewHolder, position: Int) {
@@ -31,42 +28,45 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
         return weatherList.size
     }
 
-    class WeatherViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textViewDegree = itemView.findViewById<TextView>(R.id.textViewDegree)
-        private val textViewDegreeBw = itemView.findViewById<TextView>(R.id.textViewDegreeBw)
-        private val textViewCity = itemView.findViewById<TextView>(R.id.textViewCity)
-        private val imageViewStatus = itemView.findViewById<ImageView>(R.id.imageViewStatus)
-        private val textViewStatus = itemView.findViewById<TextView>(R.id.textViewStatus)
+    class WeatherViewHolder(private val binding: ItemWeatherBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(weather: Weather) {
-            textViewDegree.text = "${weather.degree}°"
-            textViewDegreeBw.text = "${weather.degreeMin}° - ${weather.degreeMax}°"
-            textViewCity.text = weather.city
-            textViewStatus.text = weather.status
+            binding.textViewDegree.text = "${weather.degree}°"
+            binding.textViewDegreeBw.text = "${weather.degreeMin}° - ${weather.degreeMax}°"
+            binding.textViewCity.text = weather.city
+            binding.textViewStatus.text = weather.status
 
-            fetchImage(weather.status, imageViewStatus)
+            val statusDrawableRes = fetchImage(weather.status)
+            setImage(statusDrawableRes)
 
             itemView.setOnClickListener {
                 goDetailsPage(weather)
             }
         }
 
-
-        private fun fetchImage(status: String, imageViewStatus: ImageView) {
-            when (status) {
-                "Güneşli" -> imageViewStatus.setImageResource(R.drawable.ic_sunny)
-                "Bulutlu" -> imageViewStatus.setImageResource(R.drawable.ic_cloudy)
-                "Yağmurlu" -> imageViewStatus.setImageResource(R.drawable.ic_rainy)
-                "Karlı" -> imageViewStatus.setImageResource(R.drawable.ic_snowy)
+        @DrawableRes
+        private fun fetchImage(status: String): Int {
+            val context = itemView.context
+            return when (status) {
+                context.getString(R.string.sunny) -> R.drawable.ic_sunny
+                context.getString(R.string.cloudy) -> R.drawable.ic_cloudy
+                context.getString(R.string.rainy) -> R.drawable.ic_rainy
+                context.getString(R.string.snowy) -> R.drawable.ic_snowy
+                else -> R.drawable.ic_sunny
             }
         }
 
-        private fun goDetailsPage(weather: Weather){
+        private fun setImage(@DrawableRes image: Int) {
+            binding.imageViewStatus.setImageResource(image)
+        }
+
+        private fun goDetailsPage(weather: Weather) {
             val context = itemView.context
             val intent = Intent(context, DetailsActivity::class.java)
-            intent.putExtra("degree", weather.degree)
-            intent.putExtra("city", weather.city)
-            intent.putExtra("status", weather.status)
+            intent.putExtra(context.getString(R.string.key_degree), weather.degree)
+            intent.putExtra(context.getString(R.string.key_city), weather.city)
+            intent.putExtra(context.getString(R.string.key_status), weather.status)
             context.startActivity(intent)
         }
     }
