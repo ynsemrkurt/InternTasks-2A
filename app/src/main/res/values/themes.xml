@@ -14,5 +14,8 @@
         <!-- Color styles -->
         <item name="strokeColor">@color/day_color</item>
         <item name="android:textColor">@color/day_color</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
 </resources>

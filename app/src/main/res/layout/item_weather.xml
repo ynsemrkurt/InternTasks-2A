@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/layout_size_small"
-    android:layout_marginBottom="@dimen/margin_medium"
     android:layout_marginStart="@dimen/margin_medium"
-    android:layout_marginEnd="@dimen/margin_medium"
     android:layout_marginTop="@dimen/margin_xsmall"
+    android:layout_marginEnd="@dimen/margin_medium"
+    android:layout_marginBottom="@dimen/margin_medium"
     android:orientation="horizontal"
     app:cardCornerRadius="@dimen/corner_radius_large"
     app:cardElevation="@dimen/elevation_large">
@@ -71,7 +70,6 @@
                 android:textAppearance="?textAppearanceTitleSmall"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewCity"
                 app:layout_constraintEnd_toEndOf="@+id/imageViewStatus"
-                app:layout_constraintStart_toStartOf="@+id/imageViewStatus"
                 app:layout_constraintTop_toTopOf="@+id/textViewCity" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

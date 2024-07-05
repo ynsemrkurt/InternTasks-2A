@@ -14,5 +14,8 @@
         <!-- Color styles -->
         <item name="strokeColor">@color/night_color</item>
         <item name="android:textColor">@color/night_color</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
     </style>
 </resources>
