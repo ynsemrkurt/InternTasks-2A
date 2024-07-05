@@ -7,5 +7,8 @@
         <item name="textAppearanceTitleSmall">@style/SmallTextStyle</item>
         <item name="textAppearanceBody1">@style/XSmallTextStyle</item>
         <item name="textAppearanceBody2">@style/XSmallBoldTextStyle</item>
+
+        <!-- Button styles -->
+        <item name="background">@drawable/button_style</item>
     </style>
 </resources>

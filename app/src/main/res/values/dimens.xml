@@ -31,6 +31,7 @@
     <dimen name="corner_radius_small">4dp</dimen>
     <dimen name="corner_radius_medium">8dp</dimen>
     <dimen name="corner_radius_large">16dp</dimen>
+    <dimen name="corner_radius_xlarge">50dp</dimen>
 
     <!-- Border Size -->
     <dimen name="border_width_thin">1dp</dimen>
