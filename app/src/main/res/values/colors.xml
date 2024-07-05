@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#000000FF</color>
+    <color name="day_color">#2F3541</color>
+    <color name="night_color">#FEFEFE</color>
 </resources>

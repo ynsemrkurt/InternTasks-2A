@@ -10,5 +10,9 @@
 
         <!-- Button styles -->
         <item name="background">@drawable/button_style</item>
+
+        <!-- Color styles -->
+        <item name="color">@color/day_color</item>
+        <item name="android:textColor">@color/day_color</item>
     </style>
 </resources>

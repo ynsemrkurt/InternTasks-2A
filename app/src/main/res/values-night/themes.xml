@@ -7,5 +7,12 @@
         <item name="textAppearanceTitleSmall">@style/SmallTextStyle</item>
         <item name="textAppearanceBody1">@style/XSmallTextStyle</item>
         <item name="textAppearanceBody2">@style/XSmallBoldTextStyle</item>
+
+        <!-- Button styles -->
+        <item name="background">@drawable/button_style</item>
+
+        <!-- Color styles -->
+        <item name="color">@color/night_color</item>
+        <item name="android:textColor">@color/night_color</item>
     </style>
 </resources>
