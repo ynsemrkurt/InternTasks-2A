@@ -7,4 +7,13 @@
     <string name="default_status">Güneşli</string>
     <string name="date">01 Nisan 2024</string>
     <string name="today">Bugün</string>
+    <string name="degree">26°</string>
+    <string name="sunny">Güneşli</string>
+    <string name="wind">Rüzgar</string>
+    <string name="kmS">3 km/s</string>
+    <string name="date1">Sal, 02 Nisan</string>
+    <string name="date2">Çar, 03 Nisan</string>
+    <string name="date3">Per, 04 Nisan</string>
+    <string name="date4">Cum, 05 Nisan</string>
+    <string name="degreeLong">14° - 27°</string>
 </resources>
