@@ -26,6 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
                 android:text="@string/default_degree"
                 android:textAppearance="?textAppearanceTitleLarge"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,22 +36,23 @@
                 android:id="@+id/textViewDegreeBw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_large"
                 android:text="@string/default_degree_bw"
                 android:textAppearance="?textAppearanceTitleSmall"
-                app:layout_constraintStart_toStartOf="@+id/textViewDegree"
+                app:layout_constraintBottom_toTopOf="@+id/textViewCity"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewDegree" />
 
             <TextView
                 android:id="@+id/textViewCity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_medium"
                 android:text="@string/default_city"
                 android:textAppearance="?textAppearanceTitleSmall"
-                app:layout_constraintStart_toStartOf="@+id/textViewDegreeBw"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDegreeBw" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imageViewStatus"
@@ -66,11 +68,13 @@
                 android:id="@+id/textViewStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_large"
                 android:text="@string/default_status"
                 android:textAppearance="?textAppearanceTitleSmall"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewCity"
-                app:layout_constraintEnd_toEndOf="@+id/imageViewStatus"
-                app:layout_constraintTop_toTopOf="@+id/textViewCity" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewCity"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
