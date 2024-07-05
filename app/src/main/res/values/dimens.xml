@@ -8,8 +8,6 @@
     <dimen name="margin_large">24dp</dimen>
     <dimen name="margin_xlarge">32dp</dimen>
     <dimen name="margin_xxlarge">64dp</dimen>
-    <dimen name="margin_xxxlarge">128dp</dimen>
-    <dimen name="margin_xxxxlarge">180dp</dimen>
 
     <!-- Padding Size -->
     <dimen name="padding_small">8dp</dimen>
