@@ -9,6 +9,9 @@
     <string name="today">Bugün</string>
     <string name="degree">26°</string>
     <string name="sunny">Güneşli</string>
+    <string name="cloudy">Bulutlu</string>
+    <string name="rainy">Yağmurlu</string>
+    <string name="snowy">Karlı</string>
     <string name="wind">Rüzgar</string>
     <string name="kmS">3 km/s</string>
     <string name="date1">Sal, 02 Nisan</string>

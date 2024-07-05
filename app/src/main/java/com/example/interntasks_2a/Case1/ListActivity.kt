@@ -1,12 +1,7 @@
 package com.example.interntasks_2a.Case1
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.interntasks_2a.R
 import com.example.interntasks_2a.databinding.ActivityListBinding
 
 class ListActivity : AppCompatActivity() {
@@ -28,8 +23,6 @@ class ListActivity : AppCompatActivity() {
             Weather(40, 35, 45, "Diyarbakır", "Yağmurlu"),
             Weather(45, 40, 50, "Edirne", "Karlı")
         )
-
-        binding.recyclerViewWeather.layoutManager= LinearLayoutManager(this)
         binding.recyclerViewWeather.adapter = WeatherAdapter(weatherList)
     }
 }
