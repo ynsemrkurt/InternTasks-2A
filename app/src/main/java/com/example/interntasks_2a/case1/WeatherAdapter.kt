@@ -13,12 +13,12 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
 
     override fun onCreateViewHolder(
         parent: ViewGroup, viewType: Int
-    ): WeatherAdapter.WeatherViewHolder {
+    ): WeatherViewHolder {
         val binding = ItemWeatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return WeatherViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: WeatherAdapter.WeatherViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: WeatherViewHolder, position: Int) {
         holder.bind(weatherList[position])
     }
 
@@ -35,7 +35,8 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
             binding.textViewCity.text = weather.city
             binding.textViewStatus.text = weather.status
 
-            val statusDrawableRes = fetchImage(weather.status)
+            val weatherStatus = WeatherStatus.fromString(itemView.context,weather.status)
+            val statusDrawableRes = fetchImage(weatherStatus)
             setImage(statusDrawableRes)
 
             itemView.setOnClickListener {
@@ -44,14 +45,13 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
         }
 
         @DrawableRes
-        private fun fetchImage(status: String): Int {
-            val context = itemView.context
+        private fun fetchImage(status: WeatherStatus): Int {
             return when (status) {
-                context.getString(R.string.sunny) -> R.drawable.ic_sunny
-                context.getString(R.string.cloudy) -> R.drawable.ic_cloudy
-                context.getString(R.string.rainy) -> R.drawable.ic_rainy
-                context.getString(R.string.snowy) -> R.drawable.ic_snowy
-                else -> R.drawable.ic_sunny
+                WeatherStatus.SUNNY -> R.drawable.ic_sunny
+                WeatherStatus.CLOUDY -> R.drawable.ic_cloudy
+                WeatherStatus.RAINY -> R.drawable.ic_rainy
+                WeatherStatus.SNOWY -> R.drawable.ic_snowy
+                WeatherStatus.UNKNOWN -> R.drawable.ic_sunny
             }
         }
 

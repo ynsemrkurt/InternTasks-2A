@@ -23,4 +23,5 @@
     <string name="key_city">city</string>
     <string name="key_status">status</string>
     <string name="update_data">Verileri Güncelle</string>
+    <string name="unknown">Bilinmeyen</string>
 </resources>

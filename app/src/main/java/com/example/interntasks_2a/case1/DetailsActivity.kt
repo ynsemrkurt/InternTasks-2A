@@ -30,7 +30,8 @@ class DetailsActivity : AppCompatActivity() {
         binding.textViewCity.text = city
         binding.textViewStatus.text = status
         status?.let {
-            val statusDrawableRes = fetchImage(it)
+            val weatherStatus = WeatherStatus.fromString(this,it)
+            val statusDrawableRes = fetchImage(weatherStatus)
             setImage(statusDrawableRes)
         } ?: run {
             Log.e("Null Error", "status is null")
@@ -38,13 +39,13 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     @DrawableRes
-    private fun fetchImage(status: String): Int {
+    private fun fetchImage(status: WeatherStatus): Int {
         return when (status) {
-            getString(R.string.sunny) -> R.drawable.ic_sunny
-            getString(R.string.cloudy) -> R.drawable.ic_cloudy
-            getString(R.string.rainy) -> R.drawable.ic_rainy
-            getString(R.string.snowy) -> R.drawable.ic_snowy
-            else -> R.drawable.ic_sunny
+            WeatherStatus.SUNNY -> R.drawable.ic_sunny
+            WeatherStatus.CLOUDY -> R.drawable.ic_cloudy
+            WeatherStatus.RAINY -> R.drawable.ic_rainy
+            WeatherStatus.SNOWY -> R.drawable.ic_snowy
+            WeatherStatus.UNKNOWN -> R.drawable.ic_sunny
         }
     }
 
