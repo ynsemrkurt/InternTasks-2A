@@ -3,7 +3,7 @@ package com.example.interntasks_2a
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.interntasks_2a.Case1.ListActivity
+import com.example.interntasks_2a.case1.ListActivity
 import com.example.interntasks_2a.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

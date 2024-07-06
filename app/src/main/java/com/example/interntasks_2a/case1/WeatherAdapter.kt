@@ -1,4 +1,4 @@
-package com.example.interntasks_2a.Case1
+package com.example.interntasks_2a.case1
 
 import android.content.Intent
 import android.view.LayoutInflater
