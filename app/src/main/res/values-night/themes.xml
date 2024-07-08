@@ -1,7 +1,21 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.InternTasks2A" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Typography styles -->
+        <item name="textAppearanceTitleLarge">@style/LargeTextStyle</item>
+        <item name="textAppearanceTitleMedium">@style/MediumTextStyle</item>
+        <item name="textAppearanceTitleSmall">@style/SmallTextStyle</item>
+        <item name="textAppearanceBody1">@style/XSmallTextStyle</item>
+        <item name="textAppearanceBody2">@style/XSmallBoldTextStyle</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonStyle">@style/CustomButtonStyle</item>
+
+        <!-- Color styles -->
+        <item name="strokeColor">@color/night_color</item>
+        <item name="android:textColor">@color/night_color</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
     </style>
 </resources>
