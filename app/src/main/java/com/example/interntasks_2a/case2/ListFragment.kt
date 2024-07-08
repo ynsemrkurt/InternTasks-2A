@@ -49,16 +49,21 @@ class ListFragment : Fragment() {
     }
 
     private fun addBundle(weather: Weather) {
-        val bundle = Bundle()
-        bundle.putInt(DEGREE_KEY, weather.degree)
-        bundle.putString(CITY_KEY, weather.city)
-        bundle.putString(STATUS_KEY, weather.status)
-        DetailsFragment().arguments = bundle
-        openFragment(DetailsFragment())
+        val bundle = Bundle().apply {
+            putInt(DEGREE_KEY, weather.degree)
+            putString(CITY_KEY, weather.city)
+            putString(STATUS_KEY, weather.status)
+        }
+        val detailsFragment = DetailsFragment().apply {
+            arguments = bundle
+        }
+        openFragment(detailsFragment)
     }
 
     private fun openFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerViewWeather, fragment).addToBackStack(null).commit()
+            .replace(R.id.fragmentContainerViewWeather, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
