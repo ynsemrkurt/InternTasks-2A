@@ -31,8 +31,7 @@ class ListActivity : AppCompatActivity() {
 
         adapter.setOnItemClickListener(object : WeatherAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                val weather = weatherList[position]
-                goDetailsPage(weather)
+                goDetailsPage(weatherList[position])
             }
         })
     }

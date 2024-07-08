@@ -1,22 +1,64 @@
 package com.example.interntasks_2a.case2
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.interntasks_2a.R
+import com.example.interntasks_2a.case1.Weather
+import com.example.interntasks_2a.case1.WeatherAdapter
+import com.example.interntasks_2a.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_list, container, false)
+    ): View {
+        binding = FragmentListBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val weatherList = listOf(
+            Weather(10, 5, 15, "İstanbul", "Güneşli"),
+            Weather(15, 10, 20, "Ankara", "Bulutlu"),
+            Weather(20, 15, 25, "İzmir", "Yağmurlu"),
+            Weather(25, 20, 30, "Antalya", "Karlı"),
+            Weather(30, 25, 35, "Bursa", "Güneşli"),
+            Weather(35, 30, 40, "Konya", "Bulutlu"),
+            Weather(40, 35, 45, "Diyarbakır", "Yağmurlu"),
+            Weather(45, 40, 50, "Edirne", "Karlı")
+        )
+
+        val adapter = WeatherAdapter(weatherList)
+        binding.recyclerViewWeather.adapter = adapter
+
+        adapter.setOnItemClickListener(object : WeatherAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                addBundle(weatherList[position])
+            }
+        })
+    }
+
+    private fun addBundle(weather: Weather) {
+        val bundle = Bundle()
+        bundle.putInt(getString(R.string.key_degree), weather.degree)
+        bundle.putString(getString(R.string.key_city), weather.city)
+        bundle.putString(getString(R.string.key_status), weather.status)
+        DetailsFragment().arguments = bundle
+        openFragment(DetailsFragment())
+    }
+
+    private fun openFragment(fragment: Fragment) {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainerViewWeather, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
