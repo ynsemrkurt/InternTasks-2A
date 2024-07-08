@@ -1,7 +1,9 @@
 package com.example.interntasks_2a.case1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.interntasks_2a.R
 import com.example.interntasks_2a.databinding.ActivityListBinding
 
 class ListActivity : AppCompatActivity() {
@@ -23,6 +25,23 @@ class ListActivity : AppCompatActivity() {
             Weather(40, 35, 45, "Diyarbakır", "Yağmurlu"),
             Weather(45, 40, 50, "Edirne", "Karlı")
         )
-        binding.recyclerViewWeather.adapter = WeatherAdapter(weatherList)
+
+        val adapter = WeatherAdapter(weatherList)
+        binding.recyclerViewWeather.adapter = adapter
+
+        adapter.setOnItemClickListener(object : WeatherAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                val weather = weatherList[position]
+                goDetailsPage(weather)
+            }
+        })
+    }
+
+    private fun goDetailsPage(weather: Weather) {
+        val intent = Intent(this@ListActivity, DetailsActivity::class.java)
+        intent.putExtra(getString(R.string.key_degree), weather.degree)
+        intent.putExtra(getString(R.string.key_city), weather.city)
+        intent.putExtra(getString(R.string.key_status), weather.status)
+        startActivity(intent)
     }
 }
