@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.interntasks_2a.Constants.CITY_KEY
+import com.example.interntasks_2a.Constants.DEGREE_KEY
+import com.example.interntasks_2a.Constants.STATUS_KEY
 import com.example.interntasks_2a.R
-import com.example.interntasks_2a.case1.Weather
-import com.example.interntasks_2a.case1.WeatherAdapter
+import com.example.interntasks_2a.Weather
+import com.example.interntasks_2a.WeatherAdapter
 import com.example.interntasks_2a.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
@@ -15,8 +18,7 @@ class ListFragment : Fragment() {
     private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentListBinding.inflate(inflater, container, false)
         return binding.root
@@ -48,17 +50,15 @@ class ListFragment : Fragment() {
 
     private fun addBundle(weather: Weather) {
         val bundle = Bundle()
-        bundle.putInt(getString(R.string.key_degree), weather.degree)
-        bundle.putString(getString(R.string.key_city), weather.city)
-        bundle.putString(getString(R.string.key_status), weather.status)
+        bundle.putInt(DEGREE_KEY, weather.degree)
+        bundle.putString(CITY_KEY, weather.city)
+        bundle.putString(STATUS_KEY, weather.status)
         DetailsFragment().arguments = bundle
         openFragment(DetailsFragment())
     }
 
     private fun openFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerViewWeather, fragment)
-            .addToBackStack(null)
-            .commit()
+            .replace(R.id.fragmentContainerViewWeather, fragment).addToBackStack(null).commit()
     }
 }

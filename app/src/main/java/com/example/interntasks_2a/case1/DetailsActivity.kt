@@ -4,17 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
+import com.example.interntasks_2a.Constants.CITY_KEY
+import com.example.interntasks_2a.Constants.DEGREE_KEY
+import com.example.interntasks_2a.Constants.STATUS_KEY
 import com.example.interntasks_2a.R
 import com.example.interntasks_2a.WeatherStatus
 import com.example.interntasks_2a.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {
-
-    companion object {
-        const val DEGREE_KEY = "degree"
-        const val CITY_KEY = "city"
-        const val STATUS_KEY = "status"
-    }
 
     private lateinit var binding: ActivityDetailsBinding
 
@@ -31,7 +28,7 @@ class DetailsActivity : AppCompatActivity() {
         binding.textViewCity.text = city
         binding.textViewStatus.text = status
         status?.let {
-            val weatherStatus = WeatherStatus.fromString(this,it)
+            val weatherStatus = WeatherStatus.fromString(this, it)
             val statusDrawableRes = fetchImage(weatherStatus)
             setImage(statusDrawableRes)
         } ?: run {

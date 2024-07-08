@@ -3,7 +3,9 @@ package com.example.interntasks_2a.case1
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.interntasks_2a.R
+import com.example.interntasks_2a.Constants.CITY_KEY
+import com.example.interntasks_2a.Constants.DEGREE_KEY
+import com.example.interntasks_2a.Constants.STATUS_KEY
 import com.example.interntasks_2a.Weather
 import com.example.interntasks_2a.WeatherAdapter
 import com.example.interntasks_2a.databinding.ActivityListBinding
@@ -40,9 +42,9 @@ class ListActivity : AppCompatActivity() {
 
     private fun goDetailsPage(weather: Weather) {
         val intent = Intent(this@ListActivity, DetailsActivity::class.java)
-        intent.putExtra(getString(R.string.key_degree), weather.degree)
-        intent.putExtra(getString(R.string.key_city), weather.city)
-        intent.putExtra(getString(R.string.key_status), weather.status)
+        intent.putExtra(DEGREE_KEY, weather.degree)
+        intent.putExtra(CITY_KEY, weather.city)
+        intent.putExtra(STATUS_KEY, weather.status)
         startActivity(intent)
     }
 }
