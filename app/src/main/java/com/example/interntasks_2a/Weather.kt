@@ -1,4 +1,4 @@
-package com.example.interntasks_2a.case1
+package com.example.interntasks_2a
 
 data class Weather(
     val degree: Int,

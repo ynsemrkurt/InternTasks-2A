@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.interntasks_2a.R
+import com.example.interntasks_2a.Weather
+import com.example.interntasks_2a.WeatherAdapter
 import com.example.interntasks_2a.databinding.ActivityListBinding
 
 class ListActivity : AppCompatActivity() {

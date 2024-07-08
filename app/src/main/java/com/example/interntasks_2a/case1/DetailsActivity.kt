@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import com.example.interntasks_2a.R
+import com.example.interntasks_2a.WeatherStatus
 import com.example.interntasks_2a.databinding.ActivityDetailsBinding
 
 class DetailsActivity : AppCompatActivity() {

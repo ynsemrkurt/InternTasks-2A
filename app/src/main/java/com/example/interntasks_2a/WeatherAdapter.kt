@@ -1,10 +1,9 @@
-package com.example.interntasks_2a.case1
+package com.example.interntasks_2a
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
-import com.example.interntasks_2a.R
 import com.example.interntasks_2a.databinding.ItemWeatherBinding
 
 class WeatherAdapter(private val weatherList: List<Weather>) :
