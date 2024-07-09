@@ -42,7 +42,7 @@ class DetailsFragment : Fragment() {
                 status,
                 requireContext()
             )
-        }.run {
+         } ?: run {
             Log.e("Null Error", "arguments is null")
         }
     }
