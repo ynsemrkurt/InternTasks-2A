@@ -5,5 +5,5 @@ data class Weather(
     val degreeMin: Int,
     val degreeMax: Int,
     val city: String,
-    val status: String
+    val status: String,
 )
