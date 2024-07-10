@@ -13,6 +13,9 @@
         android:theme="@style/Base.Theme.InternTasks2A"
         tools:targetApi="31">
         <activity
+            android:name=".case3.WeatherComponentActivity"
+            android:exported="false" />
+        <activity
             android:name=".case2.WeatherActivity"
             android:exported="false" />
         <activity
