@@ -6,19 +6,10 @@ import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.interntasks_2a.databinding.ItemWeatherBinding
 
-class WeatherAdapter(private val weatherList: List<Weather>) :
-    RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
-
-    interface OnItemClickListener {
-        fun onItemClick(position: Int)
-    }
-
-    private var listener: OnItemClickListener? = null
-
-
-    fun setOnItemClickListener(listener: OnItemClickListener) {
-        this.listener = listener
-    }
+class WeatherAdapter(
+    private val weatherList: List<Weather>,
+    private val itemClickListener: (Weather) -> Unit
+) : RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherViewHolder {
         val binding = ItemWeatherBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -38,7 +29,9 @@ class WeatherAdapter(private val weatherList: List<Weather>) :
 
         init {
             itemView.setOnClickListener {
-                listener?.onItemClick(adapterPosition)
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    itemClickListener(weatherList[adapterPosition])
+                }
             }
         }
 

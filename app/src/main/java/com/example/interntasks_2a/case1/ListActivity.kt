@@ -30,14 +30,8 @@ class ListActivity : AppCompatActivity() {
             Weather(45, 40, 50, "Edirne", "Karlı")
         )
 
-        val adapter = WeatherAdapter(weatherList)
+        val adapter = WeatherAdapter(weatherList) { weather -> goDetailsPage(weather) }
         binding.recyclerViewWeather.adapter = adapter
-
-        adapter.setOnItemClickListener(object : WeatherAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                goDetailsPage(weatherList[position])
-            }
-        })
     }
 
     private fun goDetailsPage(weather: Weather) {

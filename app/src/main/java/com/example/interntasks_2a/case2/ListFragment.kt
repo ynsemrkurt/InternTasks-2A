@@ -38,14 +38,8 @@ class ListFragment : Fragment() {
             Weather(45, 40, 50, "Edirne", "Karlı")
         )
 
-        val adapter = WeatherAdapter(weatherList)
+        val adapter = WeatherAdapter(weatherList) { weather -> addBundle(weather) }
         binding.recyclerViewWeather.adapter = adapter
-
-        adapter.setOnItemClickListener(object : WeatherAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                addBundle(weatherList[position])
-            }
-        })
     }
 
     private fun addBundle(weather: Weather) {
