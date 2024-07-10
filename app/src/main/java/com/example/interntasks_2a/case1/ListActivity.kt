@@ -9,6 +9,7 @@ import com.example.interntasks_2a.Constants.STATUS_KEY
 import com.example.interntasks_2a.Weather
 import com.example.interntasks_2a.WeatherAdapter
 import com.example.interntasks_2a.databinding.ActivityListBinding
+import com.example.interntasks_2a.weatherList
 
 class ListActivity : AppCompatActivity() {
 
@@ -18,17 +19,6 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val weatherList = listOf(
-            Weather(10, 5, 15, "İstanbul", "Güneşli"),
-            Weather(15, 10, 20, "Ankara", "Bulutlu"),
-            Weather(20, 15, 25, "İzmir", "Yağmurlu"),
-            Weather(25, 20, 30, "Antalya", "Karlı"),
-            Weather(30, 25, 35, "Bursa", "Güneşli"),
-            Weather(35, 30, 40, "Konya", "Bulutlu"),
-            Weather(40, 35, 45, "Diyarbakır", "Yağmurlu"),
-            Weather(45, 40, 50, "Edirne", "Karlı")
-        )
 
         val adapter = WeatherAdapter(weatherList) { weather -> goDetailsPage(weather) }
         binding.recyclerViewWeather.adapter = adapter
