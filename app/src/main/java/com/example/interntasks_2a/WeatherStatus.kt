@@ -1,7 +1,6 @@
-package com.example.interntasks_2a.case1
+package com.example.interntasks_2a
 
 import android.content.Context
-import com.example.interntasks_2a.R
 
 enum class WeatherStatus(val statusResId: Int) {
     SUNNY(R.string.sunny),

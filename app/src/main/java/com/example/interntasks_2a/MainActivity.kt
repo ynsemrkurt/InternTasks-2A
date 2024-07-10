@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.interntasks_2a.case1.ListActivity
+import com.example.interntasks_2a.case2.WeatherActivity
 import com.example.interntasks_2a.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonGoCase1.setOnClickListener {
             startActivity(Intent(this, ListActivity::class.java))
+        }
+
+        binding.buttonGoCase2.setOnClickListener {
+            startActivity(Intent(this, WeatherActivity::class.java))
         }
     }
 }
