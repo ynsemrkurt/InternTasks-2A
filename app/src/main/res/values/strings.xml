@@ -25,4 +25,5 @@
     <string name="update_data">Verileri Güncelle</string>
     <string name="unknown">Bilinmeyen</string>
     <string name="fragments">Fragments</string>
+    <string name="navigation_component">Navigation Component</string>
 </resources>
