@@ -1,5 +1,9 @@
 package com.example.interntasks_2a
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Weather(
     val id: Int,
     val degree: Int,
@@ -7,7 +11,7 @@ data class Weather(
     val degreeMax: Int,
     val city: String,
     val status: String,
-)
+): Parcelable
 
 val weatherList = listOf(
     Weather(1,10, 5, 15, "İstanbul", "Güneşli"),
