@@ -22,16 +22,7 @@
         android:label="fragment_details"
         tools:layout="@layout/fragment_details">
         <argument
-            android:name="id"
-            app:argType="integer" />
-        <argument
-            android:name="degree"
-            app:argType="integer" />
-        <argument
-            android:name="city"
-            app:argType="string" />
-        <argument
-            android:name="status"
-            app:argType="string" />
+            android:name="weather"
+            app:argType="com.example.interntasks_2a.Weather" />
     </fragment>
 </navigation>
