@@ -31,10 +31,7 @@ class ListFragment : Fragment() {
 
     private fun navigateToDetails(weather: Weather) {
         val action = ListFragmentDirections.actionGoDetailsFragment(
-            weather.id,
-            weather.degree,
-            weather.city,
-            weather.status
+            weather
         )
         findNavController().navigate(action)
     }

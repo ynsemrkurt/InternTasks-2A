@@ -24,18 +24,16 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val degree = args.degree
-        val city = args.city
-        val status = args.status
+        val weather=args.weather
 
         WeatherUtils.bindWeatherData(
             binding.textViewDegree,
             binding.textViewCity,
             binding.textViewStatus,
             binding.imageViewStatus,
-            degree,
-            city,
-            status,
+            weather.degree,
+            weather.city,
+            weather.status,
             requireContext()
         )
     }
