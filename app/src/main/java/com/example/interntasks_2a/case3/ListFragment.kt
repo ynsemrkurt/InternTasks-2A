@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.interntasks_2a.Constants
 import com.example.interntasks_2a.Weather
 import com.example.interntasks_2a.WeatherAdapter
 import com.example.interntasks_2a.databinding.FragmentListBinding
@@ -27,6 +28,12 @@ class ListFragment : Fragment() {
 
         val adapter = WeatherAdapter(weatherList) { weather -> navigateToDetails(weather) }
         binding.recyclerViewWeather.adapter = adapter
+
+        parentFragmentManager.setFragmentResultListener(Constants.UPDATE_DEGREE_KEY, this) { _, result ->
+            val updatedDegree = result.getInt(Constants.DEGREE_KEY)
+            val weatherId = result.getInt(Constants.ID_KEY)
+            updateDegree(updatedDegree, weatherId)
+        }
     }
 
     private fun navigateToDetails(weather: Weather) {
@@ -34,5 +41,14 @@ class ListFragment : Fragment() {
             weather
         )
         findNavController().navigate(action)
+    }
+
+    private fun updateDegree(updatedDegree: Int, weatherId: Int) {
+        val updatedWeather = weatherList.find { it.id == weatherId }
+        updatedWeather?.let {
+            it.degree = updatedDegree
+            val adapter = binding.recyclerViewWeather.adapter as WeatherAdapter
+            adapter.notifyItemChanged(weatherList.indexOf(updatedWeather))
+        }
     }
 }
