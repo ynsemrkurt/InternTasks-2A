@@ -13,15 +13,6 @@
         <action
             android:id="@+id/action_go_detailsFragment"
             app:destination="@id/detailsFragment">
-            <argument
-                android:name="degree"
-                app:argType="integer" />
-            <argument
-                android:name="city"
-                app:argType="string" />
-            <argument
-                android:name="status"
-                app:argType="string" />
         </action>
     </fragment>
 
