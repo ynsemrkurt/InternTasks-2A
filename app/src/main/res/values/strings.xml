@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">InternTasks-2A</string>
+    <string name="activities">Activities</string>
+    <string name="default_degree">26°</string>
+    <string name="default_degree_bw">14° - 27°</string>
+    <string name="default_city">İstanbul</string>
+    <string name="default_status">Güneşli</string>
+    <string name="date">01 Nisan 2024</string>
+    <string name="today">Bugün</string>
+    <string name="degree">26°</string>
+    <string name="sunny">Güneşli</string>
+    <string name="cloudy">Bulutlu</string>
+    <string name="rainy">Yağmurlu</string>
+    <string name="snowy">Karlı</string>
+    <string name="wind">Rüzgar</string>
+    <string name="kmS">3 km/s</string>
+    <string name="date1">Sal, 02 Nisan</string>
+    <string name="date2">Çar, 03 Nisan</string>
+    <string name="date3">Per, 04 Nisan</string>
+    <string name="date4">Cum, 05 Nisan</string>
+    <string name="degreeLong">14° - 27°</string>
+    <string name="key_degree">degree</string>
+    <string name="key_city">city</string>
+    <string name="key_status">status</string>
+    <string name="update_data">Verileri Güncelle</string>
+    <string name="unknown">Bilinmeyen</string>
+    <string name="fragments">Fragments</string>
+    <string name="navigation_component">Navigation Component</string>
+    <string name="please_refresh">Lütfen önce yenileme işlemi yapın!</string>
+    <string name="updated_degree">%1$d°</string>
 </resources>

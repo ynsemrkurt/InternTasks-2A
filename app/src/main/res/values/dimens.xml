@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Margin Size -->
+    <dimen name="margin_xsmall">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+
+    <!-- Padding Size -->
+    <dimen name="padding_medium">16dp</dimen>
+
+    <!-- Font Size -->
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xxxxlarge">64sp</dimen>
+
+    <!-- Corner Radius Size -->
+    <dimen name="corner_radius_large">16dp</dimen>
+
+    <!-- Border Size -->
+    <dimen name="border_width_thin">1dp</dimen>
+
+    <!-- Icon Size -->
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="icon_size_xlarge">64dp</dimen>
+    <dimen name="icon_size_xxlarge">80dp</dimen>
+
+    <!-- Layout Size -->
+    <dimen name="layout_size_small">160dp</dimen>
+    <dimen name="layout_size_medium">240dp</dimen>
+
+    <!-- Elevation Size -->
+    <dimen name="elevation_large">12dp</dimen>
+
+</resources>

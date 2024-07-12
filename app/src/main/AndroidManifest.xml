@@ -10,8 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.InternTasks2A"
+        android:theme="@style/Base.Theme.InternTasks2A"
         tools:targetApi="31">
+        <activity
+            android:name=".case3.WeatherComponentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".case2.WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".case1.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".case1.ListActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
