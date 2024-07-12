@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.navArgs
 import com.example.interntasks_2a.Constants
 import com.example.interntasks_2a.R
@@ -44,7 +45,7 @@ class DetailsFragment : Fragment() {
 
         binding.imageViewRefresh.setOnClickListener {
             updatedDegree = randomDegree(weather.degreeMax, weather.degreeMin)
-            binding.textViewDegree.text = "${updatedDegree}°"
+            binding.textViewDegree.text = getString(R.string.updated_degree,updatedDegree)
         }
 
         binding.buttonUpdate.setOnClickListener {
@@ -62,7 +63,7 @@ class DetailsFragment : Fragment() {
                 putInt(Constants.DEGREE_KEY, it)
                 putInt(Constants.ID_KEY, weather.id)
             }
-            parentFragmentManager.setFragmentResult(Constants.UPDATE_DEGREE_KEY, result)
+            setFragmentResult(Constants.UPDATE_DEGREE_KEY, result)
             parentFragmentManager.popBackStack()
         } ?: run {
             Toast.makeText(requireContext(), getString(R.string.please_refresh), Toast.LENGTH_SHORT).show()
