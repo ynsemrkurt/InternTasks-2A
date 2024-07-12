@@ -26,4 +26,6 @@
     <string name="unknown">Bilinmeyen</string>
     <string name="fragments">Fragments</string>
     <string name="navigation_component">Navigation Component</string>
+    <string name="please_refresh">Lütfen önce yenileme işlemi yapın!</string>
+    <string name="updated_degree">%1$d°</string>
 </resources>
